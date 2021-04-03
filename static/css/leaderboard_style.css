@@ -1,38 +1,42 @@
 .content {
-    padding: 5% 5%;
-    width: calc(100% - 10%);
-    perspective: 1000px;
+  padding: 5% 5%;
+  width: calc(100% - 10%);
+  perspective: 1000px;
 }
 div#selects {
-    padding-top: 1%;
-    padding-bottom: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 div#selects > select {
-    float: left;
+  float: left;
 }
-table, th, td {
-    border: 0.5px solid white;
+table,
+th,
+td {
+  border: 0.5px solid white;
 }
-th, td {
-    padding: 10px 10px;
+th,
+td {
+  padding: 10px 10px;
 }
 div#img {
-    position: absolute;
-    top: 5%;
-    right: 20%;
+  position: absolute;
+  top: 5%;
+  right: 25%;
 }
 div#img > img {
-    width: 396.8px;
-    height: 830.4px;
-    animation: rotate 10s linear infinite;
-    transform-style: preserve-3d;
+  width: 396.8px;
+  height: 830.4px;
+  animation: rotate 10s linear infinite;
+  transform-style: preserve-3d;
 }
 @keyframes rotate {
-    to {
-        transform: rotateY(360deg);
-    }
+  to {
+    transform: rotateY(360deg);
+  }
 }
-select, button {
-    border-radius: 0;
-    padding: 1%, 1%;
+select,
+button {
+  border-radius: 0;
+  padding: 1%, 1%;
 }
