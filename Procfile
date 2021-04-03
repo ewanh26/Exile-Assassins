@@ -1,2 +1,2 @@
 web: gunicorn app:app
-heroku domains:add www.exileassassins.com
+domains:add www.exileassassins.com
