@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Leaderboard{% endblock %}
+{% block extra_headers %}
+    <link rel="stylesheet" href="/static/css/leaderboard_style.css">
+{% endblock %}
+{% block content %}
+    <div id="selects">
+        <select name="mode_selection" id="mode_selector">
+            {% for mode in modeToNum.keys() %}
+                {% if 'reserved' not in mode %}
+                <option value="{{mode}}">{{format(mode)}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <select name="stat_selection" id="stat_selector">
+            <option value="none">None</option>
+            {% for stat in lbStats %}
+            <option value="{{stat}}" id="{{stat}}">{{format(stat[2:])}}</option>
+            {% endfor %}
+        </select>
+        <button id="submit">Submit</button>
+    </div>
+    <div id="table">
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Value</th>
+            </tr>
+            {% for player, value in lb.items() %}
+            <tr>
+                <td>{{player}}</td>
+                <td>{{value}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div id="img"><img src="/static/clanbanner.png" alt="clanBanner"></div>
+{% endblock %}

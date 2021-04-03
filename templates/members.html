@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Members{% endblock %}
+{% block extra_headers %}
+    <link rel="stylesheet" href="/static/css/members_style.css">
+{% endblock %}
+{% block content %}
+    {% for player in nameToId.keys() %}
+        {% for character in playerToCharacterIDs[player] %}
+            <a href="/members/{{player}}/{{character}}" class="link">
+                <div class="emblem">
+                    <div class="player">
+                        <h3>{{player}}</h3>
+                        <h6>
+                            {% set components = getProfileComponentsForPlayer(200, player)[player]['characters']['data'][character] %}
+                            {{define('Gender', components['genderHash'])['displayProperties']['name']}}
+                            {{define('Race', components['raceHash'])['displayProperties']['name']}}, 
+                            {{define('Class', components['classHash'])['displayProperties']['name']}}
+                        </h6>
+                    </div>
+                    <img
+                    src="https://bungie.net/{{components['emblemBackgroundPath']}}"
+                    alt="{{character}}">
+                </div>
+            </a>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

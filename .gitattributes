@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.sql linguist-language=sql
+*.sql linguist-detectable=true
+*.js linguist-detectable=false

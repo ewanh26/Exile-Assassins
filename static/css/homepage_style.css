@@ -1,0 +1,20 @@
+#clanbanner {
+    position: absolute;
+    padding: 2% 5%;
+}
+.text {
+    color: white;
+    position: absolute;
+    padding: 4% 33%;
+    max-width: 66%;
+}
+.text h1 {
+    font-weight: bolder;
+    font-size: 48pt;
+}
+.text h2, p {
+    transform: translate(3px);
+}
+.text > * {
+    background-color: black;
+}

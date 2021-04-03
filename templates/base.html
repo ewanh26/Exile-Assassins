@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="/static/css/base_style.css">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% block extra_headers %}{% endblock %}
+    </head>
+    <body>
+        <div id="loading">
+            <img id="loading-image" src="/static/loading.gif" alt="Loading..." />
+            <div id="msg-div">
+                <h4 id="msg" class="msg">
+                Making API Requests and Contacting the Database. This may take a while</h4>
+                <h4 class="msg"><br>Time may vary depending on your connection speed</h4>
+            </div>
+        </div>
+        <div class="topnav">
+            <a href="/home"><img id="logo" alt="logo" src="/static/LOGO.PNG"></a>
+            <a href="/lore" class="link">Lore</a>
+            <a href="/leaderboards" class="link">Leaderboards</a>
+            <a href="/members" class="link">Members</a>
+            <a href="/home" class="link">Home</a>
+        </div>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+        <script src="/static/ts/js/base.js"></script>
+    </body>
+</html>

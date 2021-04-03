@@ -1,0 +1,50 @@
+.stat-img {
+    width: 80px;
+    height: 80px;
+}
+.stat-item {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+}
+.all {
+    padding: 5% 5%;
+    max-width: 100%;
+}
+.content {
+    margin-right: 0px;
+    max-width: 100%;
+}
+.no-bullet-points {
+    list-style-type: none;
+}
+.stats {
+    width: 90%;
+}
+.items {
+    padding-top: 150px;
+}
+.container > div {
+    display: inline-block;
+}
+.container {
+    padding: 1% 0;
+}
+.text-c {
+    padding-left: 1%;
+    transform: translate(0, -42px);
+}
+.item-pic {
+    border: 2px solid white;
+    width: 96px;
+    height: 96px;
+}
+table, th, td {
+    border: 0.5px solid white;
+}
+th, td {
+    padding: 10px 10px;
+}
+.historicalStats > div {
+    float: left;
+}

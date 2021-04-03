@@ -1,0 +1,21 @@
+.content {
+    padding: 5% 10%;
+    width: 80%;
+}
+img#cb {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.4;
+}
+div#text {
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    width: 46%;
+    max-width: 66%;
+    z-index: 10;
+}
+/*div#text > textarea {
+
+}

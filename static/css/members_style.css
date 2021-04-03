@@ -1,0 +1,21 @@
+.emblem {
+    position: relative;
+    color: white;
+    display: inline-block;
+}
+.player {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 5px;
+}
+.player h6 {
+    color: lightgrey;
+}
+img {
+    display: block;
+}
+.content {
+    padding-left: 5px;
+    padding-top: 5px;
+    width: calc(100% - 5px);
+} 

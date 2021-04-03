@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}{{player}}{% endblock %}
+{% block extra_headers %}
+    <link rel="stylesheet" href="/static/css/member_style.css">
+    <link rel="preload" href="/static/LightSymbol.PNG" as="image" type="image/png">
+{% endblock %}
+{% block content %}
+    <div class="all">
+        <h1>Total Time Played: {{time}}, Last Played: {{lastPlayed}}</h1>
+        <br>
+        <div class="stats">
+            <ul class="no-bullet-points">
+                {% for statID, statValue in profileComponentsForCharacter['stats'].items() %}
+                    <li class="stat-item">
+                        <div class="stat">
+                            <img src="https://bungie.net{{define('Stat', statID)['displayProperties']['icon']}}" alt="statPic" class="stat-img"><h4 class="stat-val">{{statValue}}</h4>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="items">
+            {% for item in equipment %}
+                <div class="container">
+                    {% set definedItem = define('InventoryItem', item['itemHash']) %}
+                    <div>
+                        <img src="https://bungie.net{{definedItem['displayProperties']['icon']}}" alt="itemPic" class="item-pic">
+                    </div>
+                    <div class="text-c">
+                        <h2>{{definedItem['displayProperties']['name']}}</h2>
+                        <h3>{{definedItem['itemTypeDisplayName']}}</h3>
+                        <h6 style="color: lightgrey">
+                            {{definedItem['flavorText']}}
+                        </h6>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="historicalStats">
+            <div style="padding-right: 50px">
+                <h2>PvP</h2>
+                <br>
+                <table>
+                    <tr>
+                        <th>Stat Name</th>
+                        <th>Value</th>
+                    </tr>
+                    {% for statName, statVal in generalPvP.items() %}
+                    <tr>
+                        <td>{{format(statName)}}</td>
+                        <td>{{statVal['basic']['displayValue']}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div style="padding-right: 50px">
+                <h2>PvE</h2>
+                <br>
+                <table>
+                    <tr>
+                        <th>Stat Name</th>
+                        <th>Value</th>
+                    </tr>
+                    {% for statName, statVal in generalPvE.items() %}
+                    <tr>
+                        <td>{{format(statName)}}</td>
+                        <td>{{statVal['basic']['displayValue']}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div style="padding-right: 50px">
+                <h2>PvP Medals</h2>
+                <br>
+                <table>
+                    <tr>
+                        <th>Stat Name</th>
+                        <th>Value</th>
+                    </tr>
+                    {% for statName, statVal in medalPvP.items() %}
+                    <tr>
+                        <td>{{format(statName)}}</td>
+                        <td>{{statVal['basic']['displayValue']}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
