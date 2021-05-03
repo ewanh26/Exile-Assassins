@@ -8,7 +8,8 @@ nameToId = {
     'OllieKG546' : 12254948,
     'Cea-2005' : 25047270,
     'why-u-nub-man' : 17890017,
-    'Ace_of_space__' : 26815361
+    'Ace_of_space__' : 26815361,
+    'EchoFolf' : 16043892
     #Obed and Joe don't have Bungie.net accounts so don't have Bnet ID's
 }
 idToName = {v:k for k, v in nameToId.items()}

@@ -133,7 +133,7 @@ def stringFormat(s):
 #print(stringFormat("medal5xStreak"))
 
 #print(getCurrentSQLManifestDatabasePath())
-#print(getProfileComponentsForPlayer(201, 'Harry221019'))
+#print(getProfileComponentsForPlayer(200, 'EchoFolf'))
 #print(define('InventoryItem', 4248569242))
 #print(characterIDToPlayer)
 #print(getComponentsForCharacter(200, 2305843009430784091))
