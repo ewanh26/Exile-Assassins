@@ -1,4 +1,3 @@
-DROP TABLE DestinyEnemyRaceDefinition;
 DROP TABLE DestinyPlaceDefinition;
 DROP TABLE DestinyActivityDefinition;
 DROP TABLE DestinyActivityTypeDefinition;
@@ -47,5 +46,4 @@ DROP TABLE DestinyArtifactDefinition;
 DROP TABLE DestinyBreakerTypeDefinition;
 DROP TABLE DestinyChecklistDefinition;
 DROP TABLE DestinyEnergyTypeDefinition;
-DROP TABLE DestinyHistoricalStatsDefinition;
 VACUUM;
