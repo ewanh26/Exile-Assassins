@@ -2,7 +2,7 @@ import math, sqlite3, os, requests, json
 from Dicts import nameToId, idToName, modeToNum, numToMode, defToQueryIndex
 from functools import lru_cache
 
-API_KEY = 'be8a6658c34947deb6de2c5c6eb75dd7' #HAHA U CANT SEE MY API KEY
+API_KEY = 'be8a6658c34947deb6de2c5c6eb75dd7'
 API_KEY_HEADER = { 'X-API-Key' : API_KEY }
 
 myId = 15516748
@@ -130,20 +130,18 @@ def stringFormat(s):
             res += char
     return res
 
-#print(stringFormat("medal5xStreak"))
+if __name__ == "__main__":
+    #print(getCurrentSQLManifestDatabasePath())
+    #print(getProfileComponentsForPlayer(200, 'EchoFolf'))
+    #print(define('InventoryItem', 4248569242))
+    #print(characterIDToPlayer)
+    #print(getComponentsForCharacter(200, 2305843009430784091))
+    #print(userInfoCards)
+    #print(getStatsForCharacter(modeToNum['allPvE'], 'Medals', 2305843009430784091))
+    #print(getLeaderboard('lbKills', modeToNum['allPvE']))
 
-#print(getCurrentSQLManifestDatabasePath())
-#print(getProfileComponentsForPlayer(200, 'EchoFolf'))
-#print(define('InventoryItem', 4248569242))
-#print(characterIDToPlayer)
-#print(getComponentsForCharacter(200, 2305843009430784091))
-#print(userInfoCards)
-#print(getStatsForCharacter(modeToNum['allPvE'], 'Medals', 2305843009430784091))
-#print(getLeaderboard('lbKills', modeToNum['allPvE']))
-
-#    for player in nameToId.keys():
-#        for characterIDList in playerToCharacterIDs[player]:
-#            for character in characterIDList:
-#                print({getProfileComponentsForPlayer(1100, player)[player]['characters']['data']['character']['emblemPath']})
-
-
+    #    for player in nameToId.keys():
+    #        for characterIDList in playerToCharacterIDs[player]:
+    #            for character in characterIDList:
+    #                print({getProfileComponentsForPlayer(1100, player)[player]['characters']['data']['character']['emblemPath']})
+    pass
